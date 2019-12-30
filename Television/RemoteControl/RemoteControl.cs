@@ -11,7 +11,7 @@ namespace Television
     /// </summary>
     public class RemoteControl
     {
-        //a field for storing a reference to a command object.
+        //field for storing a reference to a command object.
         private ICommand command;
         public void setCommand(ICommand command)
         {
