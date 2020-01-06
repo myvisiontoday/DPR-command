@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Television
 {
     /// <summary>
@@ -11,7 +6,7 @@ namespace Television
     /// </summary>
     public class RemoteControl
     {
-        //field for storing a reference to a command object.
+        //a field for storing a reference to a command object.
         private ICommand command;
         public void setCommand(ICommand command)
         {

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Television
@@ -16,6 +10,9 @@ namespace Television
         public TelevisionDisplay()
         {
             InitializeComponent();
+            channelLabel.Visible = false;
+            volumeBar.Visible = false;
+            volumeLabel.Visible = false;
         }
 
         public void SetTelevision(Television television)
@@ -37,9 +34,20 @@ namespace Television
         public void panel1_BackColorChanged(object sender, EventArgs e)
         {
             if (television.GetPower())
+            {
                 panel1.BackColor = Color.Blue;
+                channelLabel.Visible = true;
+                volumeBar.Visible = true;
+                volumeLabel.Visible = true;
+            }
+
             else
+            {
                 panel1.BackColor = Color.Black;
+                channelLabel.Visible = false;
+                volumeBar.Visible = false;
+                volumeLabel.Visible = false;
+            }
         }
     }
 }

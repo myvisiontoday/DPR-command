@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Television
 {
     // The Television class has actual TV operations. It plays the role of a receiver: all commands end up delegating
@@ -30,14 +25,14 @@ namespace Television
         public void volumeUp()
         {
             if(volume< 100)
-                this.volume++;
+                this.volume+=2;
         }
 
         //decreases the volume by 1
         public void volumeDown()
         {
             if(volume > 0)
-                this.volume--;
+                this.volume-=2;
         }
 
         //increases the channel by 1
